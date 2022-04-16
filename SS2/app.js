@@ -124,13 +124,57 @@ let arr = [1, 2, 3, 4, 5, 6, 10];
 
 
 /// VD về filter: Trả về mảng mới sao cho các phẩn tử trong mảng arr phải lớn hơn 4
-let arr3 = arr.filter((item) => {
-  return item > 4
-})
+// let arr3 = arr.filter((item) => {
+//   return item > 4
+// })
 
-console.log(arr3);// 5, 6, 10
+// console.log(arr3);// 5, 6, 10
 
 
+//// VD về filter và map
+const animals = [
+  {
+    name: "cat",
+    size: "small",
+    weight: 5
+  },
+  {
+    name: "dog",
+    size: "small",
+    weight: 7
+  },
+  {
+    name: "elephant",
+    size: "big",
+    weight: 5000
+  },
+]
+
+
+/// Bài toán: in ra "tên" từng con vật trong mảng animals
+let animalName = animals.map((item) => {
+  return item.name
+}
+)
+
+console.log(animalName);
+
+
+/// Bài toán: Lấy ra con vật nào có cân nặng "weight" < 1000
+let animalWeightMinium = animals.filter((item) => {
+  return item.weight < 1000
+}
+)
+
+console.log(animalWeightMinium);
+
+/// Bài toán: Lọc ra  con vật nào có size small
+let animalSizeMinium = animals.filter((item) => {
+  return item.size == "small"
+}
+)
+
+console.log(animalSizeMinium);
 
 
 
