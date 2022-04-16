@@ -40,6 +40,7 @@ let BK = {
   hobbies: 'Anime',
   KhanhID: "002"
 }
+
 let VT = {
   name: "Vũ Tùng",
   age: 17,
@@ -47,5 +48,29 @@ let VT = {
   TungID: "003"
 }
 
-let hdt_jsi10 = Object.assign(MĐ, BK, VT);
-console.log("hdt_jsi10: ", hdt_jsi10); // => {}
+// let hdt_jsi10 = Object.assign(MĐ, BK, VT);
+// console.log("hdt_jsi10: ", hdt_jsi10); // => {}
+
+
+
+/////// ------------------  Spread Syntax ---------------
+/// Sử dụng trong fucntion call
+let sum = (x, y, z) => {
+  return x + y + z
+}
+
+let number = [1, 4, 7]; // tổng = 12
+
+console.log(sum(...number)); // Tách từng phần tử của mảng và gán vào tham số: x,y,z
+
+//// Copy object 
+let copy_Object = { ...BK } // cú pháp copy đối tượng với ...
+console.log("copy_Object: ", copy_Object);
+
+
+
+//// Copy Array
+let copy_Array = [...number];
+console.log("copy_Array: ", copy_Array);
+
+
