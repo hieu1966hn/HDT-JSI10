@@ -46,15 +46,17 @@ for of: Duyệt mảng với từng phần tử mảng
 /// Bài 1: ý b
 
 let input = prompt("Người dùng nhập vào khóa học cần tìm"); // jsb
-let nameOfCourse = []
+let nameOfCourse = [] // dùng để lưu tên người học khóa học cần tìm
 for (let key of students) {
-  if (input === key.course.find(item => item === input)) {
+  if (input === key.course.find(
+    function (item) { // item: đi từng phần tử trong mảng
+      return item === input
+    }
+  )) {
     nameOfCourse.push(key.name)
   }
-
   // Tìm kiếm nội dung trong mảng thì dùng gi? 
 }
-
 
 if (nameOfCourse.length == 0) {
   alert("Chưa có lớp học này")
