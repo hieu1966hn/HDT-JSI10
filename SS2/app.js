@@ -76,11 +76,21 @@ let VT = {
 
 
 // -------------- Nối Array ---------
-let arr1 = ['abc', 34, 'Gaming'];
-let number = [1, 4, 7];
+// let arr1 = ['abc', 34, 'Gaming'];
+// let number = [1, 4, 7];
 
-/// => Nối 2 mảng này với nhau ?
-let connector = [...arr1, ...number];
-console.log("connector: ", connector);
+// /// => Nối 2 mảng này với nhau ?
+// let connector = [...arr1, ...number];
+// console.log("connector: ", connector);
+
+
+// -------------- Convert String -> Array
+let str = 'Hello, xin chào mọi người nhé';
+// Convert String -> Array
+let chars = [...str];
+console.log("chars: ", chars);
+
+
+
 
 
