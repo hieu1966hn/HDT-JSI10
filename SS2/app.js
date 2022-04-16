@@ -59,7 +59,7 @@ let VT = {
 //   return x + y + z
 // }
 
-// let number = [1, 4, 7]; // tổng = 12
+// let number = [1, 4, 7, 8]; // tổng = 12
 
 // console.log(sum(...number)); // Tách từng phần tử của mảng và gán vào tham số: x,y,z
 
@@ -72,6 +72,11 @@ let VT = {
 // //// Copy Array
 // let copy_Array = [...number];
 // console.log("copy_Array: ", copy_Array);
+// let copyArray_Original = number;
+// console.log("number: ", number);
+
+// console.log("copyArray_Original: ", copyArray_Original);
+
 
 
 
@@ -85,10 +90,39 @@ let VT = {
 
 
 // -------------- Convert String -> Array
-let str = 'Hello, xin chào mọi người nhé';
-// Convert String -> Array
-let chars = [...str];
-console.log("chars: ", chars);
+// let str = 'Hello, xin chào mọi người nhé';
+// // Convert String -> Array
+// let chars = [...str];
+// console.log("chars: ", chars);
+
+
+
+
+
+// ----------------- Map, Filter -------------
+
+/// VD về map:
+
+let arr = [1, 2, 3, 4, 5, 6, 10];
+
+// Tăng từng phần tử mảng lên gấp 2 lần: 2,4,6,.. 20
+// Duyệt mảng: for, for in, for of
+// C1: Dùng for
+// for (let key of arr) {
+//   console.log(key * 2);
+// }
+
+// console.log(arr);
+
+
+/// C2: Sử dụng map: Tạo ra mảng mới, dựa trên thay đổi từ mảng cũ
+let arr2 = arr.map((item) => {
+  return item * 2
+})
+
+console.log("arr2: ", arr2);
+
+
 
 
 
