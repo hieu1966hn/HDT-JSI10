@@ -55,22 +55,32 @@ let VT = {
 
 /////// ------------------  Spread Syntax ---------------
 /// Sử dụng trong fucntion call
-let sum = (x, y, z) => {
-  return x + y + z
-}
+// let sum = (x, y, z) => {
+//   return x + y + z
+// }
 
-let number = [1, 4, 7]; // tổng = 12
+// let number = [1, 4, 7]; // tổng = 12
 
-console.log(sum(...number)); // Tách từng phần tử của mảng và gán vào tham số: x,y,z
+// console.log(sum(...number)); // Tách từng phần tử của mảng và gán vào tham số: x,y,z
 
-//// Copy object 
-let copy_Object = { ...BK } // cú pháp copy đối tượng với ...
-console.log("copy_Object: ", copy_Object);
+// //// Copy object 
+// let copy_Object = { ...BK } // cú pháp copy đối tượng với ...
+// console.log("copy_Object: ", copy_Object);
 
 
 
-//// Copy Array
-let copy_Array = [...number];
-console.log("copy_Array: ", copy_Array);
+// //// Copy Array
+// let copy_Array = [...number];
+// console.log("copy_Array: ", copy_Array);
+
+
+
+// -------------- Nối Array ---------
+let arr1 = ['abc', 34, 'Gaming'];
+let number = [1, 4, 7];
+
+/// => Nối 2 mảng này với nhau ?
+let connector = [...arr1, ...number];
+console.log("connector: ", connector);
 
 
