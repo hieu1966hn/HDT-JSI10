@@ -115,12 +115,12 @@ let arr = [1, 2, 3, 4, 5, 6, 10];
 // console.log(arr);
 
 
-/// C2: Sử dụng map: Tạo ra mảng mới, dựa trên thay đổi từ mảng cũ
+/// C2: Sử dụng map: Tạo ra mảng mới, dựa trên thay đổi từ mảng cũ => Luôn là kiểu dữ liệu tương ứng
 let arr2 = arr.map((item) => {
   return item * 2
 })
 
-console.log("arr2: ", arr2);
+console.log("arr2: ", arr2); // 2, 4, 6,... 20
 
 
 
