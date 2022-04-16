@@ -176,5 +176,7 @@ let animalSizeMinium = animals.filter((item) => {
 
 console.log(animalSizeMinium);
 
+/// => Lọc ra con vật nào có size = "big"
+
 
 
