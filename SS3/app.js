@@ -34,7 +34,7 @@
 
 /*
 Đề bài: Cho 2 mảng sau: arr1 = [1,2,4,5,6]; arr2 = [1.6.8.9.0].
-Hãy lọc ra một mảng mới chứa 2 phần tử trùng nhau của 2 mảng cho bên trên. 
+Hãy lọc ra một mảng mới chứa 2 phần tử trùng nhau của 2 mảng cho bên trên.
 (sử dụng filter() )
 
 filter: Lọc phần tử mảng: dựa vào điều kiện cần lọc
@@ -56,26 +56,42 @@ filter: Lọc phần tử mảng: dựa vào điều kiện cần lọc
 
 //// VD về filter: Chỉ dành cho mảng
 
-let arr = [
-  ["apple", 15],
-  ["lemon", 5],
-  ["orange", 5],
-  ["banana", 5],
-  ["grape", 10],
-]
+// let arr = [
+//   ["apple", 15],
+//   ["lemon", 5],
+//   ["orange", 5],
+//   ["banana", 5],
+//   ["grape", 10],
+// ]
 
-// Tìm và in ra tên quả nào có số lượng lớn hơn 5
+// // Tìm và in ra tên quả nào có số lượng lớn hơn 5
 
-let arrFilter = arr.filter(item => item[1] > 5);
-console.log("arrFilter: ", arrFilter);///?
+// let arrFilter = arr.filter(item => item[1] > 5);
+// console.log("arrFilter: ", arrFilter);///?
 
-/// VD2:
-let arrTest = [1, 3, 43241, 4, 5, -1, -300, -100];
-// Lọc ra các phần tử âm trong mảng;
-let phanTuAm = arrTest.filter(
-  item => item < 0
-)
-console.log("phanTuAm: ", phanTuAm);
+// /// VD2:
+// let arrTest = [1, 3, 43241, 4, 5, -1, -300, -100];
+// // Lọc ra các phần tử âm trong mảng;
+// let phanTuAm = arrTest.filter(
+//   item => item < 0
+// )
+// console.log("phanTuAm: ", phanTuAm);
+
+
+///// map: Duyệt mảng và trả về kết quả| kết quả thay đổi
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// trả về 1 mảng| toàn bộ phần tử trong mảng arr kết quả là gấp 2: 2,4,6,8,10,..
+//// C1
+// let arrMap = arr.map(item => item * 2); 
+
+//// C2
+let arrMap2 = arr.map(function (item) {
+  return item * 2;
+})
+
+console.log("arrMap: ", arrMap2);
+
+
 
 
 
