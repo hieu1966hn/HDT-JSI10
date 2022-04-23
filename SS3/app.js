@@ -85,7 +85,12 @@ let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // let arrMap = arr.map(item => item * 2); 
 
 //// C2
-let arrMap2 = arr.map(function (item) {
+// let arrMap2 = arr.map(function (item) {
+//   return item * 2;
+// })
+
+////C3
+let arrMap2 = arr.map((item) => {
   return item * 2;
 })
 
