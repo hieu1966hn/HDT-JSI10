@@ -41,18 +41,41 @@ filter: Lọc phần tử mảng: dựa vào điều kiện cần lọc
 
 */
 
-let lop1 = [1, 2, 4, 5, 6];
-let lop2 = [1, 6, 8, 9, 0];
+// let lop1 = [1, 2, 4, 5, 6];
+// let lop2 = [1, 6, 8, 9, 0];
 
-// => Xác định phần tử nào trùng nhau đối với 2 mảng trên => in ra nó
+// // => Xác định phần tử nào trùng nhau đối với 2 mảng trên => in ra nó
 
-for (let key of lop1) { // duyet tưng phần tử mảng lop1
-  let temp = lop2.filter(item => item === key); // Lọc phần tử sao cho thỏa mãn điều kiện
-  if (temp[0]) { // Kiểm tra xem mảng temp có tồn tại phần tử hay không
-    console.log(temp[0]);// 1, 6
-  }
+// for (let key of lop1) { // duyet tưng phần tử mảng lop1
+//   let temp = lop2.filter(item => item === key); // Lọc phần tử sao cho thỏa mãn điều kiện
+//   if (temp[0]) { // Kiểm tra xem mảng temp có tồn tại phần tử hay không
+//     console.log(temp[0]);// 1, 6
+//   }
 
-}
+// }
+
+//// VD về filter: Chỉ dành cho mảng
+
+let arr = [
+  ["apple", 15],
+  ["lemon", 5],
+  ["orange", 5],
+  ["banana", 5],
+  ["grape", 10],
+]
+
+// Tìm và in ra tên quả nào có số lượng lớn hơn 5
+
+let arrFilter = arr.filter(item => item[1] > 5);
+console.log("arrFilter: ", arrFilter);///?
+
+/// VD2:
+let arrTest = [1, 3, 43241, 4, 5, -1, -300, -100];
+// Lọc ra các phần tử âm trong mảng;
+let phanTuAm = arrTest.filter(
+  item => item < 0
+)
+console.log("phanTuAm: ", phanTuAm);
 
 
 
