@@ -79,7 +79,7 @@ filter: Lọc phần tử mảng: dựa vào điều kiện cần lọc
 
 
 ///// map: Duyệt mảng và trả về kết quả| kết quả thay đổi
-let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // trả về 1 mảng| toàn bộ phần tử trong mảng arr kết quả là gấp 2: 2,4,6,8,10,..
 //// C1
 // let arrMap = arr.map(item => item * 2); 
@@ -90,19 +90,39 @@ let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // })
 
 ////C3
-let arrMap2 = arr.map((item) => {
-  return item * 2;
-})
+// let arrMap2 = arr.map((item) => {
+//   return item * 2;
+// })
 
-console.log("arrMap: ", arrMap2);
+// console.log("arrMap: ", arrMap2);
 
+/*
+Sử dụng map() với arr = [1,54,6,7] 
+Để tạo ra một newArr có newArr[i] = arr[i] + 5.
 
+*/
+// let arr = [1, 54, 6, 7];
+// let arrCong5 = arr.map(item => item + 5);
+// console.log("arrCong5: ", arrCong5);
 
+/*
+Cho array sau: m = [1,2,4,5,6,7]; n = [3,5,675,8,96]. 
+Hãy viết một hàm, duyệt cả các mảng m và n; 
+loại bỏ đi phần tử có giá trị bằng 1, 8,10,96,7.
+*/
 
+let m = [1, 2, 4, 5, 6, 7];
+let n = [3, 5, 675, 8, 96];
+// Viết hàm duyệt mảng sao cho => loại bỏ 1, 8,10,96,7
 
+// C1: function, C2: const ()=>{}
 
+const removeItem = (arr) => {
+  return arr.filter(item => (item != 1 && item != 8 && item != 10 && item != 96 && item != 7))
+}
 
-
+console.log(removeItem(m));
+console.log(removeItem(n));
 
 
 
