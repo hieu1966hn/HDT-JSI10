@@ -38,11 +38,36 @@
 
 
 // 3. Tính kế thừa
+// class Person {
+//   /// khai báo thuộc tính của lớp
+//   constructor(_name, _age) {
+//     this.name = _name
+//     this.age = _age
+//   }
+
+//   say() {
+//     return `I am Person and my name is ${this.name}`
+//   }
+// }
+
+// // Khai báo clas Student kế thừa từ clas Person
+// class Student extends Person {
+//   constructor(_name, _age, _mhs) {
+//     super(_name, _age); // Kế thừa thuộc tính name, age đã khai báo của cha nó
+//     this.mhs = _mhs
+//   }
+// }
+
+// let VuTung = new Student("Đoàn Vũ Tùng", 17, "1234567890");
+// console.log("VuTung: ", VuTung);
+// console.log(VuTung.say());
+
+
+// 3.1 Kế thừa và ghi đè phương thức của class cha
+
 class Person {
-  /// khai báo thuộc tính của lớp
-  constructor(_name, _age) {
-    this.name = _name
-    this.age = _age
+  constructor(_name) {
+    this.name = _name;
   }
 
   say() {
@@ -50,17 +75,21 @@ class Person {
   }
 }
 
-// Khai báo clas Student kế thừa từ clas Person
 class Student extends Person {
-  constructor(_name, _age, _mhs) {
-    super(_name, _age); // Kế thừa thuộc tính name, age đã khai báo của cha nó
-    this.mhs = _mhs
+  constructor(_name, _code) {
+    super(_name);
+    this.code = _code
+  }
+
+  say() {
+    // kế thừa và ghi đè phương thức say();
+    super.say(); // Kế thừa phương thức /// => trả về String
+
+    return super.say() + "\n\n" + `my code is: ${this.code}`
+
   }
 }
 
-let VuTung = new Student("Đoàn Vũ Tùng", 17, "1234567890");
-console.log("VuTung: ", VuTung);
-console.log(VuTung.say());
-
-
+let me = new Student("Super idol", "al;ksjfopqkhfíad;lkflj");
+console.log(me.say());
 
