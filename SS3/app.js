@@ -118,7 +118,8 @@ let n = [3, 5, 675, 8, 96];
 // C1: function, C2: const ()=>{}
 
 const removeItem = (arr) => {
-  return arr.filter(item => (item != 1 && item != 8 && item != 10 && item != 96 && item != 7))
+  return arr.filter(item =>
+    (item != 1 && item != 8 && item != 10 && item != 96 && item != 7))
 }
 
 console.log(removeItem(m));
