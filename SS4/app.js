@@ -1,6 +1,6 @@
 // tham khảo trước cú pháp OOP trong JS
 
-// 1. Khởi tạo class trong JS
+//////////// 1. Khởi tạo class trong JS
 // class Person {
 
 //   // Khai báo phương thức say
@@ -14,7 +14,7 @@
 // HuyBinh.say();
 
 
-// 2. Thuộc tính của class trong Javascript
+///////////// 2. Thuộc tính của class trong Javascript
 // class Person {
 //   // khai báo thuộc tính
 //   constructor(_name, _age, _address, _hobbies) {
@@ -37,7 +37,7 @@
 // console.log(me.name);//?
 
 
-// 3. Tính kế thừa
+////////// 3. Tính kế thừa
 // class Person {
 //   /// khai báo thuộc tính của lớp
 //   constructor(_name, _age) {
@@ -63,33 +63,34 @@
 // console.log(VuTung.say());
 
 
-// 3.1 Kế thừa và ghi đè phương thức của class cha
+//////////// 3.1 Kế thừa và ghi đè phương thức của class cha
+// class Person {
+//   constructor(_name) {
+//     this.name = _name;
+//   }
 
-class Person {
-  constructor(_name) {
-    this.name = _name;
-  }
+//   say() {
+//     return `I am Person and my name is ${this.name}`
+//   }
+// }
 
-  say() {
-    return `I am Person and my name is ${this.name}`
-  }
-}
+// class Student extends Person {
+//   constructor(_name, _code) {
+//     super(_name);
+//     this.code = _code
+//   }
 
-class Student extends Person {
-  constructor(_name, _code) {
-    super(_name);
-    this.code = _code
-  }
+//   say() {
+//     // kế thừa và ghi đè phương thức say();
+//     super.say(); // Kế thừa phương thức /// => trả về String
 
-  say() {
-    // kế thừa và ghi đè phương thức say();
-    super.say(); // Kế thừa phương thức /// => trả về String
+//     return super.say() + "\n\n" + `my code is: ${this.code}`
 
-    return super.say() + "\n\n" + `my code is: ${this.code}`
+//   }
+// }
 
-  }
-}
+// let me = new Student("Super idol", "al;ksjfopqkhfíad;lkflj");
+// console.log(me.say());
 
-let me = new Student("Super idol", "al;ksjfopqkhfíad;lkflj");
-console.log(me.say());
+
 
