@@ -23,5 +23,14 @@
 
 .register-container .input-name-wrapper {
   display: flex;
+  justify-content: space-between;
+}
 
+.register-container .input-name-wrapper .input-wrapper {
+  width: 48%;
+}
+
+
+#register-form {
+  padding: 20px;
 }
