@@ -4,6 +4,16 @@ const init = () => {
   const registerForm = document.getElementById("register-form");
   const loginForm = document.getElementById("login-form");
 
+  // document.getElementById("redirect-to-login").
+  //   addEventListener("click", function () {
+  //     window.location.href = '../html/login.html'
+  //   })
+
+
+  // document.getElementById("redirect-to-register").
+  //   addEventListener("click", function () {
+  //     window.location.href = '../html/register.html'
+  //   })
 
   registerForm.addEventListener("submit", function (event) {
     event.preventDefault(); // giải quyết vđề tự động reload web
