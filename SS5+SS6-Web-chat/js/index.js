@@ -1,5 +1,5 @@
 const init = () => {
-  alert("Hàm init đã được chạy");
+  // alert("Hàm init đã được chạy");
 
   const registerForm = document.getElementById("register-form");
   const loginForm = document.getElementById("login-form");
@@ -18,7 +18,8 @@ const init = () => {
 
     console.log(data);
 
-    controller(data);
+    controller.register(data);
+    // Kiểm tra lỗi người dùng type tại trang đăng ký
   })
 
 }
