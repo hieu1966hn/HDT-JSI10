@@ -14,6 +14,19 @@ registerForm.addEventListener("submit", function (event) {
 
   console.log(data);
 
+  const register = async (data) => {
+    try {
+      await firebase.auth().createUserWithEmailAndPassword(data.email, data.password)
+      firebase.auth().currentUser.sendEmailVerification();
+      alert("The email has been registered, please check your email");
+    }
+    catch (err) {
+      console.log(err);
+      alert(err.message);
+    }
+  }
+
+  register(data);
 
 
   registerForm.firstName.value = ""
@@ -28,5 +41,5 @@ registerForm.addEventListener("submit", function (event) {
 
 document.getElementById("redirect-to-login").
   addEventListener("click", function () {
-    window.location.href = '../html/login.html'
+    window.location.href = './login.html'
   })
