@@ -8,7 +8,7 @@ const init = () => {
   // https://firebase.google.com/docs/web/setup#available-libraries
 
   // Your web app's Firebase configuration
-  const firebaseConfig = {
+  let firebaseConfig = {
     apiKey: "AIzaSyAX5z0vvKHMxG9Jo4kvaPKEzKBJW2het1I",
     authDomain: "fir-test-fd2ba.firebaseapp.com",
     projectId: "fir-test-fd2ba",
@@ -18,8 +18,10 @@ const init = () => {
   };
 
   // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  console.log(app);
+  firebase.initializeApp(firebaseConfig)
+  // const app = initializeApp(firebaseConfig);
+  console.log(firebase.app().name); //DEFAULT
+  // console.log(firebase.app().name);
 
 }
 
