@@ -35,6 +35,7 @@ registerForm.addEventListener("submit", function (event) {
   registerForm.password.value = ""
   registerForm.confirmPassword.value = ""
 
+  location.href = "./login.html"
   // controller.register(data);
   // Kiểm tra lỗi người dùng type tại trang đăng ký
 })
