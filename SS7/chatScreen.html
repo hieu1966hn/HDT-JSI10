@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChatScreen</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/chatScreen.css">
+</head>
+
+<body>
+  <!-- ChatScreen -->
+  <div class="chat-container">
+
+    <div class="header">
+      <h1>MindX chat</h1>
+      <div class="side-bar">
+        <i class="fa-solid fa-bars" aria-hidden=""></i>
+      </div>
+
+      <div id="sign-out">
+        Sign out
+      </div>
+    </div>
+
+
+    <div class="main">
+      <div class="aside-left">
+        <div class="create-conversation">
+          <button class="btn">
+            + New conversation
+          </button>
+        </div>
+
+        <div class="list-conversation"></div>
+      </div>
+
+      <div class="conversation-detail">
+
+        <div class="conversation-header">
+          First conversation
+        </div>
+        <div class="list-messages">
+          <div class="message-container mine">
+            <div class="content">
+              Hello World
+            </div>
+          </div>
+          <div class="message-container their">
+            <div class="owner">
+              bot@gmail.com
+            </div>
+            <div class="content">
+              Hi, I am bot
+            </div>
+          </div>
+        </div>
+
+        <form id="send-message-form"></form>
+
+
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
