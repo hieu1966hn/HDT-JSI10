@@ -23,8 +23,33 @@ const init = () => {
   console.log(firebase.app().name); //DEFAULT
   // console.log(firebase.app().name);
 
+
+  // Chạy hàm này
+  firestoreFunction();
+
 }
 
 
 
 window.onload = init;
+
+
+
+///// Viết hàm riêng thao tác thử với firebase Database
+const firestoreFunction = async () => {
+
+  // get one document
+  const documentId = "ycpwtMNJmhMtPo6l0h5W";
+  const response = await firebase.firestore().collection('users').doc(documentId).get();
+  console.log("response: ", response);
+
+  const user = getDataFromDoc(response);
+  console.log("user: ", user);
+}
+
+
+const getDataFromDoc = (doc) => {
+  const data = doc.data();
+  data.id = doc.id;
+  return data;
+}
